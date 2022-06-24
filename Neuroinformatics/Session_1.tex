@@ -181,6 +181,19 @@ describe both the spatial and temporal characteristics of each inferred state.
 	others, there is no closed-form solution available
 \end{quote}
 \end{frame}
+
+\begin{frame}{Autoregressive Model}
+If you consider time series data (meaning measuring the same variable over time), say $X_t$. An \textbf{autoregressive model} defines the current value based on previous values
+\begin{equation*}
+	X_t= \beta_0 + \beta_1 X_{t-1}
+\end{equation*}	
+The \textbf{order} of the AR model refers to the number of past variables that you will consider. For instance, an AR(2) model would be 
+
+\begin{equation*}
+X_t= \beta_0 + \beta_1 X_{t-1}+ \beta_2 X_{t-2}
+\end{equation*}
+
+\end{frame}
 %\begin{frame}{References}
 %	Materials and some of the pictures are from \citep{calin}.
 %	\printbibliography 	
