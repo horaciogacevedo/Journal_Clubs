@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2-dev (44b5b6e964, 2021-12-03)"
+   sodipodi:docname="fig_line.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:blackoutopacity="0.0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.465881"
+     inkscape:cx="300.70388"
+     inkscape:cy="323.21105"
+     inkscape:window-width="1421"
+     inkscape:window-height="946"
+     inkscape:window-x="2229"
+     inkscape:window-y="35"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 53.219654,84.121386 100.85982,63.091041"
+       id="path590" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="52.468567"
+       y="90.130058"
+       id="text2518"><tspan
+         sodipodi:role="line"
+         id="tspan2516"
+         style="stroke-width:0.264583"
+         x="52.468567"
+         y="90.130058">$A$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="100.85983"
+       y="59.121025"
+       id="text9282"><tspan
+         sodipodi:role="line"
+         id="tspan9280"
+         style="stroke-width:0.264583"
+         x="100.85983"
+         y="59.121025">$B$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="58.477238"
+       y="67.597542"
+       id="text17814"><tspan
+         sodipodi:role="line"
+         id="tspan17812"
+         style="stroke-width:0.264583"
+         x="58.477238"
+         y="67.597542">$(1-t)A+tB$</tspan></text>
+    <ellipse
+       style="opacity:1;fill:#ff0000;stroke:none;stroke-width:0.705556;stroke-linejoin:round"
+       id="path29833"
+       cx="101.87183"
+       cy="62.508228"
+       rx="1.2339234"
+       ry="1.1266257" />
+    <ellipse
+       style="fill:#ff0000;stroke:none;stroke-width:0.705556;stroke-linejoin:round"
+       id="path29833-8"
+       cx="52.575871"
+       cy="84.550575"
+       rx="1.2339234"
+       ry="1.1266257" />
+  </g>
+</svg>

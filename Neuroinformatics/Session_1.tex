@@ -194,6 +194,72 @@ X_t= \beta_0 + \beta_1 X_{t-1}+ \beta_2 X_{t-2}
 \end{equation*}
 
 \end{frame}
+\begin{frame}{Training a HMM}
+	The normal way to train the parameters from a HMM is based on the Baum-Welch algorithm (backward-forward algorithm).
+	
+	This algorithm requires the whole series of data to determine the parameters.
+	
+	To avoid this issue the authors suggest a method called Stochastic Variational Inference.
+\end{frame}
+
+\begin{frame}{Stochastic Variational Inference}
+	The methodology is to split the HMM into two parts:local and global variables
+	\begin{figure}[h]
+		\centering
+		%	\begin{subfigure}{0.4\textwidth}
+			%		\centering
+			\includegraphics[scale=0.4]{../Figures/fig_stoc_var_inference.png}
+			%	\end{subfigure}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{What about those equations?}
+	\begin{equation}
+		\varphi_{new}= (1-\rho)\varphi_{old}+ \rho \varphi_{interum}
+	\end{equation}
+	\begin{figure}[h]
+		\centering
+		%	\begin{subfigure}{0.4\textwidth}
+			%		\centering
+			\includegraphics[scale=0.4]{../Figures/fig_simple_line.png}
+			%	\end{subfigure}
+	\end{figure}
+	\begin{equation}
+		\rho(c)= (c+\alpha)^\beta
+	\end{equation}
+	
+\end{frame}
+
+
+\begin{frame}{Final stochastic step}
+	It runs a random sampling of subjects with a twist:
+	
+	Promote those subjects that have been historically sampled fewer times. 
+\begin{enumerate}	
+	\item Initialise the observation models.
+	
+	\item Repeat:
+	\begin{enumerate}
+	\item Choose M subjects at random using probabilities, wi, computed as in (Eq. (3)).
+	\item Compute the state time courses for the M subjects.
+	\item Compute the interim state probability distribution using the M subjects as though we had N subjects.
+	\item 
+	Perform an approximate update of the state probability distributions using (Eq. (1)).
+	\item 
+	Perform an exact update of the state transition probabilities.
+	\item 
+	Update $\rho$ using (Eq. (2)).
+	\item 
+	Compute the free energy.
+	\end{enumerate}
+
+\end{enumerate}
+	
+	
+	Until the free energy converges.
+\end{frame}
+
+
 %\begin{frame}{References}
 %	Materials and some of the pictures are from \citep{calin}.
 %	\printbibliography 	
