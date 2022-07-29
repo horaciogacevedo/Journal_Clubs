@@ -92,7 +92,7 @@ eprint=false
 		\end{figure}
 	\end{frame}
 \begin{frame}{Modeling ingredients}
-	The paper follows some of the same themes as the previous one
+	The paper follows some of the similar themes as the previous one
 	\begin{itemize}
 		\item Hidden Markov Models
 		\item Autoregressive models
@@ -167,7 +167,41 @@ It calls it exponential due to the Taylor representation of the exponential func
 	\exp(X)= 1 + X + \frac{1}{2!}X^2 + \frac{1}{3!}X^3 + \cdots
 \end{equation*}
 	\end{frame}
-	
+
+\begin{frame}{Oh Bayes where art thou?}
+	Unlike the traditional (frequentist) inference, the Bayesian approach tries to determine conclusions about a parameter $\theta$ or unobserved data $\overline{y}$ as probability statements.  For example, given the observed data $y$,  Bayesian statements are based on the conditionals such as  $P(\overline{y}|y)$ for {\it new data} $\overline{y}$, or $P(\theta|y)$ for a parameter $\theta$. So following our Bayes theorem,
+
+\begin{equation}
+	{\color{blue}P(\theta| y)}=\frac{{\color{red} P(\theta)} {\color{green}P(y|\theta)}}{\color{purple}P(y)}
+	\label{eq:bayes2}
+\end{equation}
+where $P(y)= \sum_{\theta} P(\theta) P(y|\theta)$ (or in the continuous case $P(y)= \int P(\theta) P(y|\theta) d\theta$). 
+
+The expression  $\color{red} P(\theta)$ is called the {\bf prior}, whereas  $\color{blue} P(\theta|y)$  is called {\bf posterior}, and $\color{green}P(y|\theta)$ is called {\bf likelihood}, and $\color{purple}P(y)$ is called {\bf evidence}. 
+
+\end{frame}	
+
+\begin{frame}{Oh Bayes where art thou? (cont)}
+		\begin{figure}[h]
+		\centering
+		%	\begin{subfigure}{0.4\textwidth}
+			%		\centering
+			\includegraphics[scale=0.75]{../Figures/fig_bayes_table.png}
+			%	\end{subfigure}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Oh Bayes where art thou? (cont)}
+	\begin{figure}[h]
+		\centering
+		%	\begin{subfigure}{0.4\textwidth}
+			%		\centering
+			\includegraphics[scale=0.65]{../Figures/fig_bayes_prior.png}
+			%	\end{subfigure}
+	\end{figure}
+\end{frame}
+
+
 \begin{frame}{Oh Bayes where art thou?}
 	The precision matrix is modeled with a Wishart distribution
 	\begin{equation}
@@ -183,6 +217,8 @@ It calls it exponential due to the Taylor representation of the exponential func
 \end{frame}
 
 \begin{frame}{Bayes cont}
+	
+The authors generate a \textit{Hierarchical Bayes Model}
 	\begin{equation}
 		W_{l_{ij}}^{(k)} \sim {\cal N}(0, \sigma_{ij}^{(k)} \alpha_j^{(k)} )
 	\end{equation}
@@ -200,7 +236,38 @@ It calls it exponential due to the Taylor representation of the exponential func
 		\Theta_k \sim Dir(\nu_0) \quad \eta \sim Dir (\psi_0)
 	\end{equation}
 The Dirichlet distribution is the conjugate prior for the parameters of the normal multinomial distribution. 
+
+
 \end{frame}
+
+\begin{frame}{Inference of Model Parameters}
+	
+	Bayesian models are difficult to perform since the Bayes' rule involves computing the evidence (nasty math problem).
+	Thus, the models are restricted to ones with \textit{simple} likelihood functions with corresponding formulas for prior distributions (called \textit{conjugate priors}) that play nice with the likelihood function. Another alternative is to use what is called \textit{variational approximation}. 
+	
+\end{frame}
+
+\begin{frame}{Spectral Properties}
+	The authors use something called \textit{Fourier Transform} to investigate find out the multiregion spectral properties of the state time courses.
+	
+	In a nutshell this methodology takes a real function $f$ and it produces a continuous function of frequency. 
+	So, the expression
+	\begin{equation}
+		S(f)= \frac{}{R}\sum_{r=1}^{R} \sum_{t=1}^{T} \delta_t^{(r)}y_t \exp(-2\pi i f t)  
+	\end{equation}
+
+
+\end{frame}
+
+%\begin{frame}{Fourier Transform}
+%	\begin{figure}[h]
+%	\centering
+%	%	\begin{subfigure}{0.4\textwidth}
+%		%		\centering
+%		\includegraphics[scale=0.65]{../Figures/fig_fourier_transform.}
+%		%	\end{subfigure}
+%\end{figure}
+%\end{frame}
 
 	
 	%\begin{frame}{References}
